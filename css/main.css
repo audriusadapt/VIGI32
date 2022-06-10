@@ -1,0 +1,282 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+@font-face {
+    font-family: "Inter";
+    src: local("Inter"),
+    url("../assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf")
+}
+
+html {
+    color: #555555;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: Inter, Google Sans, -apple-system, BlinkMacSystemFont, sans-serif;
+    white-space: nowrap;
+}
+
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.space-vertical {
+    height: 4rem;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* Header elements */
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+}
+
+.header-menu {
+    align-self: center;
+}
+
+.header-logo {
+    padding-right: 1rem;
+}
+
+.header-buttons {
+    display: none;
+}
+
+#burger {
+    opacity: 50%;
+    height: 30px;
+    padding: 5px;
+}
+
+/* ==========================================================================
+   Main elements */
+main {
+    min-height: 20rem;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Footer elements */
+.footer-divider {
+    min-height: 2px;
+    background-color: #EEEEEE;
+}
+
+.footer {
+    margin: 4rem 2rem 6.7rem 2rem;
+    font-size: 1.3rem;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 14.5rem;
+    height: 8.5rem;
+}
+
+.footer-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.footer-menu {
+    display: grid;
+    width: min-content;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 4.7rem;
+    grid-row-gap: 2.5rem;
+}
+
+.footer-bottom {
+    margin-top: 4rem;
+    color: #999999;
+}
+
+#footer-launching {
+    display: none;
+}
+
+.block p {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    margin-top: 0;
+    margin-bottom: 1.75rem;
+}
+
+.block ul {
+    text-transform: capitalize;
+}
+
+.block li {
+    margin-top: 0.8rem;
+}
+
+/* ==========================================================================
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 600px) {
+    /* ==========================================================================
+   Header elements */
+    #burger {
+        display: none;
+    }
+
+    .header-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: capitalize;
+        min-width: 18rem;
+    }
+
+    .header-buttons div:last-child {
+        color: #FF3998;
+    }
+
+    /* ==========================================================================
+       Main elements */
+
+
+    /* ==========================================================================
+       Footer elements */
+    .footer-main {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-menu {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #footer-launching {
+        display: block;
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-logo {
+        margin-right: 2rem;
+    }
+}
+
+
