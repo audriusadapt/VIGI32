@@ -16,14 +16,23 @@
     url("../assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf")
 }
 
-html {
+@font-face {
+    font-family: "Inter Bold";
+    src: local("Inter"),
+    url("../assets/fonts/Inter/static/Inter-ExtraBold.ttf") format("truetype");
+
+
+}
+
+body {
     color: #555555;
     font-size: 1em;
     line-height: 1.4;
     font-family: Inter, Google Sans, -apple-system, BlinkMacSystemFont, sans-serif;
     white-space: nowrap;
+    font-weight: 400;
+    overflow-x: hidden;
 }
-
 
 * {
     box-sizing: border-box;
@@ -115,14 +124,12 @@ textarea {
     display: flex;
     justify-content: space-between;
     margin: 2rem;
-}
-
-.header-menu {
-    align-self: center;
+    padding-bottom: 2.625rem;
 }
 
 .header-logo {
     padding-right: 1rem;
+    align-self: center;
 }
 
 .header-buttons {
@@ -138,12 +145,237 @@ textarea {
 /* ==========================================================================
    Main elements */
 main {
-    min-height: 20rem;
-    text-align: center;
+
+}
+
+/* ==========================================================================
+   Main hero elements */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2rem;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 17.125rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding-bottom: 2.375rem;
+}
+
+.hero-text > * {
+    margin: 0;
+    white-space: normal;
+}
+
+.hero-text-title {
+    color: #FF3998;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 1.5rem;
+}
+
+.hero-text-subtitle {
+    font-family: Inter Bold, Google Sans, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #111111;
+    font-weight: 900;
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.hero-text-body {
+    font-size: 1.25rem;
+    padding-bottom: 2rem;
+}
+
+.hero-gradient-box {
+    display: flex;
+    justify-content: center;
+    color: #111111;
+    font-weight: 600;
+    font-size: 1.25rem;
+    width: 11.75rem;
+    position: relative;
+    box-sizing: border-box;
+    background: white;
+    background-clip: padding-box;
+    border: solid 5px transparent;
+    border-radius: 5rem;
+}
+
+.hero-gradient-box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -5px;
+    border-radius: inherit;
+    background: linear-gradient(to right, red, orange);
+}
+
+.hero-graphic {
+    margin-top: -4rem;
+    margin-left: -5rem;
+}
+
+.hero-graphic img {
+    height: 25rem;
+}
+
+/* ==========================================================================
+   Main upsell elements */
+
+.upsell {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    background: url("../assets/background.svg") no-repeat center center;
+    background-size: cover;
+    margin: 4rem 0 0 -1rem;
+    padding: 7.625rem 0 0 3rem;
+    color: #111111;
+    white-space: normal;
+}
+
+.upsell h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.upsell p {
+    font-size: 1.25rem;
+}
+
+/* ==========================================================================
+   Main cards elements */
+
+.cards {
+    margin: 3.5rem 2rem 6rem;
+    white-space: nowrap;
+}
+figure {
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    width: 18.125rem;
+    border-radius: 0.5rem;
+    margin: auto;
+}
+
+.figures {
+    display: grid;
+    row-gap: 0.1rem;
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5rem;
+    color: #777777;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.figures-title, .figures-title-right {
+    font-size: 0.75rem;
+    color: #FF8139;
+    text-transform: uppercase;
+}
+
+.figures-title-right {
+    color: #777777;
+}
+
+.figures-middle-text {
+    font-size: 1.25rem;
+    color: #111111;
+}
+
+figcaption {
+    background-color: #EEEEEE;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.cards-title {
+    color: #111111;
+    font-size: 2.5rem;
+    font-weight: 500;
+    min-width: 22.75rem;
+}
+
+.cards-title p {
+
+}
+
+.figures p:nth-child(even) {
+    text-align: right;
+}
+
+.figures p {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Main press elements */
+
+.press {
+    display: grid;
+    grid-template-areas:
+    "boom blimp"
+    "qrco droplet";
+    gap: 1rem;
+    margin: 4rem 2rem 0 2rem;
+}
+
+#boom {
+    grid-area: boom;
+}
+
+#blimp {
+    grid-area: blimp;
+}
+
+#qrco {
+    grid-area: qrco;
+}
+
+#droplet {
+    grid-area: droplet;
+}
+
+#hidden {
+    display: none;
+}
+
+/* ==========================================================================
+   Main green hero elements */
+
+.green {
+    flex-basis: 15.125rem;
+    flex-shrink: 1;
+}
+
+#green {
+    font-size: 3.25rem;
+}
+
+.hero-green-graphic {
+    margin-top: 4rem;
+    margin-left: -2rem;
+    padding-left: 2rem;
+}
+
+.hero-green-graphic img {
+    height: 29rem;
 }
 
 /* ==========================================================================
    Footer elements */
+
 .footer-divider {
     min-height: 2px;
     background-color: #EEEEEE;
@@ -247,20 +479,58 @@ main {
         min-width: 18rem;
     }
 
-    .header-buttons div:last-child {
+    .header-buttons p:last-child {
         color: #FF3998;
+    }
+
+    .header-buttons p {
+        margin: 0;
     }
 
     /* ==========================================================================
        Main elements */
+    .hero-text {
+        flex-basis: 35rem;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
 
+    .hero-text-subtitle {
+        font-size: 6rem;
+    }
 
+    .hero-graphic img {
+        height: 35rem;
+    }
+
+    .upsell {
+        margin: 8rem 2rem 0 2rem;
+        padding-bottom: 4rem;
+        padding-left: 2rem;
+        padding-top: 9.5rem ;
+        border-radius: 0.6rem;
+    }
+
+    .press {
+        grid-template-areas:
+    "boom hidden blimp qrco droplet";
+
+    }
+
+    #hidden {
+        display: block;
+    }
+
+    .hero-green-graphic {
+        margin-right: 10rem;
+    }
     /* ==========================================================================
        Footer elements */
     .footer-main {
         display: flex;
         justify-content: space-between;
     }
+
     .footer-menu {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
