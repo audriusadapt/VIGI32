@@ -314,6 +314,15 @@ figcaption {
     white-space: normal;
 }
 
+.cards-items-eth {
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+.cards-items-eth p {
+    padding-left: 0.4rem;
+}
+
 .cards-title p {
     font-size: 1.25rem;
 }
@@ -514,7 +523,7 @@ figcaption {
         margin: 8rem 2rem 0 2rem;
         padding-bottom: 4rem;
         padding-left: 2rem;
-        padding-top: 9.5rem ;
+        padding-top: 9.5rem;
         border-radius: 0.6rem;
     }
 
@@ -531,6 +540,7 @@ figcaption {
     .hero-green-graphic {
         margin-right: 10rem;
     }
+
     /* ==========================================================================
        Footer elements */
     .footer-main {
