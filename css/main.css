@@ -264,7 +264,7 @@ main {
 .cards-items {
     display: flex;
     flex-direction: row;
-    gap: 2.5rem;
+    justify-content: space-between;
 }
 
 figure {
@@ -273,7 +273,6 @@ figure {
     padding: 5px;
     width: 18.125rem;
     border-radius: 0.5rem;
-    margin: auto;
 }
 
 .figures {
